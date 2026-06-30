@@ -1,24 +1,29 @@
 void main() {
-  // List
-  List<String> subjects = ['Calculus', 'Physics', 'Intro to Programming'];
-  print('Number of subjects: ${subjects.length}');
-  print('First subject: ${subjects[0]}');
-  print('Last subject: ${subjects[subjects.length - 1]}'); // หรือ subjects.last
+  List<String> subject = ['python', 'database', 'linear Algebra'];
+  print('number of subject is ${subject.length}');
+  print('first subject is ${subject[0]}');
+  print('last subject is ${subject[2]}');
 
-  subjects.add('English');
-  print('Updated subjects: $subjects');
+  subject.add('algorithm design');
+  print(subject);
 
-  print('---');
+  Map<String, int> studentScore = {'python': 90, 'database': 100};
+  print('Score database: ${studentScore['database']}');
 
-  // Map
-  Map<String, int> studentScores = {
-    'Calculus': 85,
-    'Physics': 78,
-  };
-  print('Score for Physics: ${studentScores['Physics']}');
+  studentScore['linear algebre'] = 46;
+  print('all score: ${studentScore}');
 
-  studentScores['Intro to Programming'] = 92;
-  print('Updated scores: $studentScores');
-  print('All subjects in map: ${studentScores.keys}');
-  print('All scores in map: ${studentScores.values}');
+  print('subject containg a');
+  for (var key in studentScore.keys) {
+    if (key.contains('a')) {
+      print('${key} : ${studentScore[key]}');
+    }
+  }
+
+  print('subject score > 50');
+  for (var key in studentScore.keys) {
+    if (studentScore[key]! > 50) {
+      print('${key} : ${studentScore[key]}');
+    }
+  }
 }
