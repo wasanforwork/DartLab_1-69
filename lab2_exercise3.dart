@@ -10,8 +10,9 @@ void main() {
   Map<String, int> studentScore = {'python': 90, 'database': 100};
   print('Score database: ${studentScore['database']}');
 
-  studentScore['linear algebre'] = 46;
-  print('all score: ${studentScore}');
+  studentScore['linear algebra'] = 46;
+  studentScore['algorithm design'] = 78;
+  print('all subject and score: ${studentScore}');
 
   print('subject containg a');
   for (var key in studentScore.keys) {
